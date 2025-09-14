@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Centre Helper - Find Everything Around Your Exam Centre</title>
+    <meta name="description"
+        content="Find cafes, restrooms, print shops, transport and more near your exam centre with Exam Centre Helper. Make exam day stress-free.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Exam Centre Helper">
+    <meta property="og:description"
+        content="Find cafes, restrooms, print shops, transport and more near your exam centre.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:5500/index.html">
+    <meta property="og:image" content="/mediaa/upscalemedia-transformed.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Exam Centre Helper">
+    <meta name="twitter:description" content="Locate everything around your exam centre to make exam day easier.">
+    <meta name="twitter:image" content="/mediaa/upscalemedia-transformed.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-map-marker-alt logo-icon" aria-hidden="true"></i>
+                <span>Exam Centre Helper</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-map-marker-alt"></i> Services</a></li>
+                    <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="policy.html"><i class="fas fa-file-alt"></i> Policy</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- News Ticker -->
+    <section class="news-ticker" aria-label="Latest announcements">
+        <div class="news-ticker__wrapper" aria-live="polite" aria-atomic="true">
+            <div class="news-ticker__content">
+                <span>✅ Exam Registration Done</span>
+                <span>✅ Admit Card Printed</span>
+                <span>✅ Exam Centre Located</span>
+                <span>✅ Stationery Packed</span>
+                <span>✅ ID Proof Ready</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-layout">
+            <!-- Left: Text + Search -->
+            <div class="hero-content">
+                <h1>Find Everything Around Your Exam Centre</h1>
+                <p>Locate cafes, restrooms, cyber cafés, print shops, transport & more to make your exam day
+                    stress-free.</p>
+                <div class="search-container">
+                    <input type="text" class="search-bar" id="searchInput" placeholder="Enter Exam Centre Name or Code"
+                        aria-label="Search Exam Centre">
+                </div>
+
+                <div class="hero-btns">
+                    <button type="button" class="btn" id="searchBtn">Search Now</button>
+                    <a href="/centres.html" class="btn btn-secondary">View All Centers</a>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const searchBtn = document.getElementById("searchBtn");
+                        const searchInput = document.getElementById("searchInput");
+
+                        searchBtn.addEventListener("click", function () {
+                            const query = searchInput.value.trim();
+                            if (query) {
+                                // Redirect to centres.html with search query
+                                window.location.href = "/centres.html?search=" + encodeURIComponent(query);
+                            } else {
+                                alert("Please enter a centre name or code before searching.");
+                            }
+                        });
+
+                        // Optional: Allow pressing Enter inside input
+                        searchInput.addEventListener("keypress", function (e) {
+                            if (e.key === "Enter") {
+                                searchBtn.click();
+                            }
+                        });
+                    });
+                </script>
+
+
+
+            </div>
+
+            <!-- Right: Girl Illustration -->
+            <div class="hero-illustration">
+                <img src="/mediaa/upscalemedia-transformed.png" loading="lazy"
+                    alt="Illustration of a girl pointing towards search bar">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Everything you need around your exam center in one place</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🍴</div>
+                    <h3>Nearby Cafes & Food</h3>
+                    <p>Find the best places to eat and drink near your exam center to stay refreshed and energized.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🖨️</div>
+                    <h3>Print & Cyber Shops</h3>
+                    <p>Locate printing services and cyber cafes for last-minute document needs and emergencies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🚆</div>
+                    <h3>Transport & Stations</h3>
+                    <p>Find the best routes and transportation options to reach your exam center on time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🏨</div>
+                    <h3>Hostels & Rest Rooms</h3>
+                    <p>Discover comfortable accommodations for resting before or after your important exams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+        <div class="container">
+            <h2 class="section-title">About Exam Centre Helper</h2>
+            <p class="section-subtitle">Making exam days less stressful for students nationwide</p>
+            <div class="about-content">
+                <p>We understand how stressful exam days can be. That's why we created Exam Centre Helper - to provide
+                    students with all the essential information they need around their exam centers. From finding a
+                    quick bite to eat to locating printing services or the nearest transportation options, we've got you
+                    covered so you can focus on what really matters: your exam.</p>
+                <a href="about.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have questions or need support? We're here to help</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone contact-icon" aria-hidden="true"></i>
+                    <span class="contact-text">Call Us</span>
+                    <a href="tel:7518007867" class="contact-link">+91 7518007867</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
+                    <span class="contact-text">Email Us</span>
+                    <a href="mailto:nikhil.singh95556@gmail.com" class="contact-link">nikhil.singh95556@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col footer-about">
+                    <h3>About Us</h3>
+                    <p>Exam Centre Helper is dedicated to making exam days less stressful for students. We provide
+                        comprehensive information about amenities and services around exam centers nationwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +91 7518007867</p>
+                    <p><i class="fas fa-envelope"></i> nikhil.singh95556@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Gorakhpur, UP 273001 India</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Exam Centre Helper. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', function () {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
