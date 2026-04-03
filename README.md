@@ -13,49 +13,161 @@ A web-based project designed to help students easily find their **exam centres**
 
 ---
 
-## 📂 Project Structure  
+# 🚀 Exam Centre Help Website
 
-```bash
+A smart and user-friendly web platform designed to help students easily locate their exam centres along with nearby facilities such as cafés, cyber cafés, print shops, transport options, and more.
+
+---
+
+## 📁 Project Structure
+
+```
 examcentrehelp/
 │
 ├── .vscode/              # Editor settings (optional)
-├── mediaa/               # Media files (images, icons, etc.)
+├── mediaa/               # Images, icons, and assets
 ├── about.html            # About page
-├── centres.html          # Exam centres list
-├── contact.html          # Contact page
+├── centres.html          # Exam centres listing
+├── contact.html          # Contact & forms
 ├── index.html            # Homepage
-├── policy.html           # Policy page
+├── policy.html           # Privacy & policies
 ├── services.html         # Services page
 ├── style.css             # Main stylesheet
-└── .gitattributes        # Git config
-🛠️ Tech Stack
-Frontend: HTML5, CSS3
+├── backend/              # Node.js backend (API server)
+│   ├── server.js
+│   ├── models/
+│   └── routes/
+└── .gitattributes        # Git configuration
+```
 
-Deployment: GitHub Pages (or any static hosting)
+---
 
-📦 Installation & Usage
-Clone the repository:
+## 🛠️ Tech Stack
 
-bash
+### 🌐 Frontend
+
+* HTML5
+* CSS3
+* Bootstrap
+* JavaScript
+
+### ⚙️ Backend
+
+* Node.js
+* Express.js
+
+### 🗄️ Database
+
+* MongoDB (NoSQL database)
+
+### 🌍 Deployment
+
+* Frontend: GitHub Pages / Netlify
+* Backend: Render / Railway / Localhost
+
+---
+
+## ✨ Features
+
+* 🔍 Search exam centres easily
+* 📍 Google Maps integration
+* 🏪 Nearby services (cafés, print shops, transport)
+* 📝 Student inquiry form
+* 🏢 Business & exam centre registration
+* 📱 Fully responsive design
+* 🔐 Secure backend with API handling
+
+---
+
+## 📦 Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/nikhilsingh95556-code/examcentrehelp.git
 cd examcentrehelp
-Open index.html in your browser.
+```
 
-Host it on GitHub Pages:
+---
 
-Go to Settings > Pages
+### 2️⃣ Run Frontend
 
-Select main branch / root
+Simply open:
 
-Your site will be live at:
-https://nikhilsingh95556-code.github.io/examcentrehelp/
+```
+index.html
+```
 
-👨‍💻 Contributors
-Nikhil Singh (Owner & Developer)
+in your browser
 
-Project Team – Department of Computer Application, M.G.P.G. College Gorakhpur
+---
 
-📜 License
-This project is developed for academic purposes. Free to use and modify with proper credit.
+### 3️⃣ Run Backend (Node.js)
 
-✨ Made with dedication by Nikhil Singh & Team
+```bash
+cd backend
+npm install
+node server.js
+```
+
+Server will run on:
+
+```
+http://localhost:5000
+```
+
+---
+
+### 4️⃣ MongoDB Setup
+
+Make sure MongoDB is installed and running locally:
+
+```
+mongodb://localhost:27017/examcentrehelp
+```
+
+---
+
+## 🌐 Deployment
+
+### Frontend (GitHub Pages)
+
+* Go to **Settings > Pages**
+* Select **main branch / root**
+* Your site will be live at:
+  👉 https://nikhilsingh95556-code.github.io/examcentrehelp/
+
+---
+
+### Backend Deployment (Optional)
+
+* Use platforms like:
+
+  * Render
+  * Railway
+  * AWS
+
+---
+
+## 👨‍💻 Contributors
+
+* **Nikhil Singh** (Owner & Developer)
+* Project Team – Department of Computer Application
+  M.G.P.G. College, Gorakhpur
+
+---
+
+## 📜 License
+
+This project is developed for academic purposes.
+You are free to use and modify it with proper credit.
+
+---
+
+## ✨ Acknowledgement
+
+Special thanks to our faculty and mentors for their guidance and support throughout the project.
+
+---
+
+💡 *Made with dedication by Nikhil Singh & Team*
